@@ -1,3 +1,4 @@
+// 测试本地Redis数据通过LRU Cache读取
 package main
 
 import (

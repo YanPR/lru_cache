@@ -1,3 +1,4 @@
+// LRU Cache包
 package lrucache
 
 import (
@@ -18,7 +19,7 @@ type lruElement struct {
 	value interface{}
 }
 
-// LRUCache.New 创建一个LRU Cache
+// New 创建一个LRU Cache
 func New(maxN int) *LRUCache {
 	return &LRUCache{
 		maxNum:     maxN,
@@ -28,7 +29,7 @@ func New(maxN int) *LRUCache {
 	}
 }
 
-// LRUCache.Set 向Cache写入key-value
+// Set 向Cache写入key-value
 func (c *LRUCache) Set(s string, value interface{}) int {
 	if c == nil {
 		return 0
@@ -58,7 +59,7 @@ func (c *LRUCache) Set(s string, value interface{}) int {
 	return 2
 }
 
-// LRUCache.Get 从Cache获取数据
+// Get 从Cache获取数据
 func (c *LRUCache) Get(key string) (interface{}, int) {
 	if c == nil {
 		return nil, 0
@@ -77,7 +78,7 @@ func (c *LRUCache) Get(key string) (interface{}, int) {
 	return nil, 0
 }
 
-// LRUCache.Len 返回Cache的长度
+// Len 返回Cache的长度
 func (c *LRUCache) Len() int {
 	if c == nil {
 		return 0
